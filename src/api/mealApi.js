@@ -1,0 +1,29 @@
+export const fetchCategories = async () => {
+   let response = await fetch(
+     "https://www.themealdb.com/api/json/v1/1/categories.php"
+   )
+
+   let data = await response.json()
+   return data.categories
+}
+export const fetchRecipes1 = async (query = "")=>{
+   try {
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`,{cache:'no-store'});
+    const data = await res.json();
+    return data.meals || [];
+   } catch (error) {
+    console.log("error fetching data :",error);
+    return [];
+   }
+}
+
+export const dataFetching = async (query = "")=>{
+   try {
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`,{cache:'no-store'});
+    const data = await res.json();
+    return data.meals || [];
+   } catch (error) {
+    console.log("error fetching data :",error);
+    return [];
+   }
+}

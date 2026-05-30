@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* PAGINATION CONTAINER */
+
+.pagescontainer {
+  width: 100%;
+  min-height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+  margin-top: 30px;
+}
+
+/* PAGE BUTTON */
+
+.active {
+  height: 42px;
+  width: 42px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  background: #f3f4f6;
+  color: #374151;
+
+  border: 1px solid transparent;
+}
+
+/* HOVER EFFECT */
+
+.active:hover {
+  background: #14b8a6;
+  color: white;
+
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(20, 184, 166, 0.3);
+}
+
+/* CURRENT PAGE */
+
+.inactive {
+  background: #14b8a6;
+  color: white;
+
+  box-shadow: 0 6px 16px rgba(20, 184, 166, 0.4);
+}
+
+/* ARROW BUTTONS */
+
+.arrow {
+  height: 42px;
+  width: 42px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #111827;
+  color: white;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* ARROW HOVER */
+
+.arrow:hover {
+  background: #14b8a6;
+
+  transform: scale(1.08);
+
+  box-shadow: 0 8px 18px rgba(20, 184, 166, 0.35);
+}
